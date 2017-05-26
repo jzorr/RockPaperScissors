@@ -1,6 +1,8 @@
 # RockPaperScissors
 
-Click on the button to start the game.
+The file containing the game is RockPaperScissors.html
+
+Once the page has loaded, click on the button to start the game.
 
 A window will appear and ask for your entry. If you happen to misspell a word, don't worry, it will notify you and you can press and play again! 
 
