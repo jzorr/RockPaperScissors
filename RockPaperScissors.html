@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
     <head>
         <meta charset="utf-8" />
@@ -33,9 +32,7 @@
                 text-align: center;
             }
         </style>
-
     </head>
-
     <body>
         <div class="header">
             <h1>Let's Play Rock-Paper-Scissors!</h1>
@@ -43,9 +40,10 @@
 
         <div class="yesPlay">
             <button onclick="myFunction()">Click here to play</button>
-        </div>
-        
+        </div> 
+
         <div class="game">
+        	<p id="myP"></p>
             <script type="text/javascript">
 
                function myFunction(){
@@ -59,7 +57,7 @@
                         computerChoice = "scissors";
                     } //console.log("Computer: " + computerChoice);
 
-                    document.write("<p>The computer picked:" + " " + computerChoice + "</p>");
+                    var x = ("<p>The computer picked:" + " " + computerChoice + "</p>");                   
 
                     var compare = function (choice1, choice2){
                         if (choice1 === choice2){
@@ -94,21 +92,15 @@
                         }
                     
                         if (userChoice != "rock" || "paper" || "scissors"){
-                             var nope = "Invalid Answer Dumbass";
+                             var nope = "You entered an invalid response.";
                              return (nope);
                         }
-
                     }
 
                     var result = compare(userChoice, computerChoice);
-
-                    document.write(result);
-
+                    document.getElementById("myP").innerHTML = (x + "<br>" + result);
                 }
             </script>
-        </div>
-        <!--<div class="tryAgain">
-            <button onclick="">Play again?</button>
-        </div>-- >
+        </div>      
     </body>
 </html>
